@@ -1,0 +1,34 @@
+<!-- <button (click)="toggleCart()"> Cart</button>
+
+<div class="cart-sidebar" [class.open]="isOpen">
+  <h3>Cart</h3>
+  <div *ngFor="let item of cart$ | async">
+    <img [src]="item.thumbnailUrl" alt="Photo">
+    <span>{{ item.title }}</span>
+    <div>
+      <button (click)="decrement(item.id)">-</button>
+      <span>{{ item.count }}</span>
+      <button (click)="increment(item.id)">+</button>
+    </div>
+    <button (click)="remove(item.id)">Remove</button>
+  </div>
+  <button (click)="checkout()">Checkout</button>
+</div> -->
+<div class="cart-container">
+    <button class="cart-toggle" (click)="toggleCart()">🛒 Cart</button>
+  
+    <div class="cart-sidebar" [class.open]="isOpen">
+      <h3>Cart</h3>
+      <div *ngFor="let item of cart$ | async">
+        <img [src]="item.thumbnailUrl" alt="Photo">
+        <span>{{ item.title }}</span>
+        <div>
+          <button (click)="decrement(item.id)">-</button>
+          <span>{{ item.count }}</span>
+          <button (click)="increment(item.id)">+</button>
+        </div>
+        <button (click)="remove(item.id)">Remove</button>
+      </div>
+      <button (click)="checkout()">Checkout</button>
+    </div>
+  </div>

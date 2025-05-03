@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: darkcyan;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    color: blue;
+    border-bottom: 2px solid blue;
+  }
+
+  .btnalign{
+    float:right;
+  }

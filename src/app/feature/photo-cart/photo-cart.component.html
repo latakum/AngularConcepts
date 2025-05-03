@@ -1,0 +1,8 @@
+<div class="photo-grid">
+    <div class="card" *ngFor="let photo of photos$ | async">
+        <img [src]="photo.thumbnailUrl" alt="Photo">
+        <h4>{{ photo.title }}</h4>
+        <button (click)="addToCart(photo)">Add to Cart</button>
+    </div>
+</div>
+

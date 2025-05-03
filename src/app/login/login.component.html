@@ -1,0 +1,17 @@
+<div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="username"></label>
+            <input type="text" formControlName="username">
+        </div>
+        <div>
+            <label for="username"></label>
+            <input type="text" formControlName="password">
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                <small *ngIf="loginForm.get('password')?.hasError('required')">Password is required</small>
+                <small *ngIf="loginForm.get('password')?.hasError('maxLength')">Enter maxLength for password</small>
+            </div>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+</div>
