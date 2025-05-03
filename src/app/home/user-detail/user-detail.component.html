@@ -1,0 +1,20 @@
+<div>
+    <ng-content></ng-content>
+</div>
+
+<div class="header">
+    <ng-content [select]="header"></ng-content>
+</div>
+
+<div class="summary">
+    <ng-content [select]="summary"></ng-content>
+</div>
+
+<div class="user-box">
+    <div><strong>UserId:</strong> {{ userDetail.userId }}</div>
+    <div><strong>Id:</strong> {{ userDetail.id }}</div>
+    <div><strong>Title:</strong> {{ userDetail.title }}</div>
+    <div><strong>Body:</strong> {{ userDetail.body }}</div>
+</div>
+<button (click)="handleMessage()">Show message</button>
+

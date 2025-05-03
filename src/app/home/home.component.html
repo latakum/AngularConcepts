@@ -1,0 +1,29 @@
+<ng-container class="userdetail">
+    <table class="styled-table">
+        <tr>
+            <th>UserID</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+        <tr *ngFor="let user of userDetails;let i = index" (click)="selectUser(user)" [class.selected]="selectedUser == user">
+            <td>{{user.userId}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.title}}</td>
+            <td>{{user.body}}</td>
+        </tr>
+    </table>
+</ng-container>
+
+<div *ngIf="selectedUser">
+    {{message}}
+    <app-user-detail [userDetail]="selectedUser" (showMessage)="receiveMessage($event)">
+        <h1>User Information {{selectedUser.id}}</h1>
+        <div header>
+            Every user has header slot 
+        </div>
+        <div summary>
+            Every user has summary slot 
+        </div>
+    </app-user-detail>
+</div>
